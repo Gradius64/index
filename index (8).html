@@ -1,0 +1,311 @@
+// TODO: Create a variable that selects the form element
+ <script>
+        // Function to store data in local storage
+        function storeLocalStorage(blogPost) {
+            localStorage.setItem('blogPost', JSON.stringify(blogPost));
+        }
+
+        
+        
+
+         
+</script>
+
+        <main>
+        <form id="blogForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            
+            <label for="content">Content:</label>
+            <textarea id="content" required></textarea>
+            
+            <p id="error" style="color: red;"></p> <!-- Error message will be displayed here -->
+            
+            <button type="submit">Submit</button>
+        </form>
+     <script>
+        // Create a variable that selects the form element
+        const form = document.getElementById('blogForm');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            const username = document.getElementById('username').value;
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const errorElement = document.getElementById('error');
+
+            // Clear previous error messages
+            errorElement.textContent = '';
+
+            // Check if any fields are empty
+            if (!username || !title || !content) {
+                errorElement.textContent = 'Please complete the form.'; // Display error message
+            } else {
+                // Create a blog post object
+                const blogPost = { username, title, content };
+                
+                // Store data in local storage
+                localStorage.setItem('blogPost', JSON.stringify(blogPost));
+                
+                // Define the redirect URL
+                const redirectURL = 'blog.html'; // Change to your actual blog page URL
+
+                // Redirect to the blog page
+                window.location.href = redirectURL;
+            }
+        });
+    </script>
+
+
+
+        // Example usage of readLocalStorage (you can call this function where needed)
+        const retrievedPost = readLocalStorage();
+        if (retrievedPost) {
+            console.log('Retrieved Post:', retrievedPost);
+        }
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create a variable that selects the form element
+            const form = document.getElementById('blogForm');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                const username = document.getElementById('username').value;
+                const title = document.getElementById('title').value;
+                const content = document.getElementById('content').value;
+                const errorElement = document.getElementById('error');
+
+                // Clear previous error messages
+                errorElement.textContent = '';
+
+                // Check if any fields are empty
+                if (!username || !title || !content) {
+                    errorElement.textContent = 'Please complete the form.'; // Display error message
+                } else {
+                    // Create a blog post object
+                    const blogPost = { username, title, content };
+                    
+                    // Store data in local storage
+                    localStorage.setItem('blogPost', JSON.stringify(blogPost));
+                    
+                    // Define the redirect URL
+                    const redirectURL = 'blog.html'; // Change to your actual blog page URL
+
+                    // Redirect to the blog page
+                    window.location.href = redirectURL;
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+<main>
+        <h1>Blog Submission Form</h1>
+        <form id="blogForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            
+            <label for="content">Content:</label>
+            <textarea id="content" required></textarea>
+            
+            <p id="error" style="color: red;"></p> <!-- Error message will be displayed here -->
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+        <form id="blogForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            
+            <label for="content">Content:</label>
+            <textarea id="content" required></textarea>
+            
+            <p id="error" style="color: red;"></p> <!-- Error message will be displayed here -->
+            
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+
+
+
+
+
+const handleFormSubmit = function(event){
+event.preventDefault();
+const username = document.getElementById('username').value;
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+            const errorElement= document.querySelector('#error')
+
+
+            document.getElementById('blogForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const username = document.getElementById('username').value;
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
+    const errorElement = document.getElementById('error');
+
+    // Clear previous error messages
+    errorElement.textContent = '';
+
+    document.getElementById('blogForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    const username = document.getElementById('username').value;
+    const title = document.getElementById('title').value;
+    const content = document.getElementById('content').value;
+    const errorElement = document.getElementById('error');
+
+    // Clear previous error messages
+    errorElement.textContent = '';
+
+    // Check if any fields are empty
+    if (!username || !title || !content) {
+        errorElement.textContent = 'Please complete the form.';
+    } else {
+        // Store data in local storage or redirect as needed
+        const blogPost = { username, title, content };
+        localStorage.setItem('blogPost', JSON.stringify(blogPost));
+
+    // Check if any fields are empty
+    if (!username || !title || !content) {
+        errorElement.textContent = 'Please complete the form.';
+    } else {
+        // Store data in local storage or redirect as needed
+        const blogPost = { username, title, content };
+        localStorage.setItem('blogPost', JSON.stringify(blogPost));
+
+            // Define the redirect URL
+        const redirectURL = 'blog.html'; // Change to your actual blog page URL
+
+        // Redirect to the blog page
+        window.location.href = redirectURL;
+    }
+});
+
+            
+
+            // Validate form fields
+            if (!username || !title || !content) { 
+                
+                errorElement.textContent = "Please complete the form.";
+                return;
+            } else {
+                errorElement.textContent = ""; // Clear error message
+            }
+
+            const toggleButton = document.getElementById('toggle');
+            const body = document.body;
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('myForm');
+        alert("error");
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            errorMessage.textContent = '';
+
+            const username = document.getElementById('username').value.trim();
+            const title = document.getElementById('title').value.trim();
+            const content = document.getElementById('content').value.trim();
+
+            function myFunction() {
+            alert("error");
+        }
+
+            const blogPost = {
+                username: username,
+                title: title,
+                content: content
+            };
+
+            
+            </script>
+
+            
+
+            localStorage.setItem('blogPost', JSON.stringify(blogPost));
+            window.location.href = 'blog.html';
+        });
+    });
+
+
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+
+            
+            
+//TODO should store form data in localStorage
+const data = localStorage.getItem('yourKey');
+
+
+// Create a blog post object
+    const blogPost = {
+        username: username,
+        title: title,
+        content: content
+    };
+
+    // Store in localStorage
+    localStorage.setItem('blogPost', JSON.stringify(blogPost));
+
+    // Redirect to the blog page
+    window.location.href = 'blog.html'; // replace with your blog page URL
+
+
+
+// Create a blog post object
+storelocalStorage.getItem('key')
+    // Store the blog post in localStorage
+    localStorage.setItem('storeLocalStorage', JSON.stringify(storeLocalStorage));
+
+    // Redirect to the blog page
+    window.location.href = 'blog.html'; // Change to your actual blog page URL
+}
+
+
+
+formEL.addEventListener('submit',handleFormSubmit)
+
+//let posts = JSON.parse(localStorage.getItem('posts'));
+
+// Check if posts is null and initialize it to an empty array if it is
+/*if (!posts) {
+    posts = []; // Initialize as an empty array
+}*/
+
+// Now you can safely use posts.every() or any other array methods
+
+  
+
+// TODO: Create a function that handles the form submission. Grab the form data and store it in local storage, then redirect to the blog page using the `redirectPage` function. If the form is submitted with missing data, display an error message to the user.
+
+// TODO: Add an event listener to the form on submit. Call the function to handle the form submission.
+
